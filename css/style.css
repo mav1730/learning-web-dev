@@ -1,0 +1,17 @@
+p{
+    text-decoration: underline;
+    font size: 20000px;
+    text-align: center ;
+    text-transform: capitalize;
+   
+
+}
+h1{
+    text-align: center ;
+    text-transform: capitalize;
+     color:#fc0000;
+     text-decoration: underline;
+     text-decoration-color: fuchsia;
+     text-decoration-style: line;
+     text-decoration-thickness: 4px ;
+}
