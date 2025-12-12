@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Demo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #2c3e50;
+            color: white;
+        }
+        
+        nav .logo { font-size: 24px; font-weight: bold; }
+        
+        nav .links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        
+        /* Cards Section */
+        .container {
+            padding: 40px;
+        }
+        
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .card {
+            flex: 1 1 250px;
+            max-width: 350px;
+            padding: 40px;
+            background: #b0d3db;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .card h3 { margin-bottom: 10px; color: #2c3e50; }
+        .card p { color: #7f8c8d; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"> YM WEBSITE</div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1 style="text-align: center; margin: 40px 0;">Flexbox Layout Demo</h1>
+        <div class="cards">
+            <div class="card">
+                <h3>Feature 1</h3>
+                <p>Description of feature 1</p>
+            </div>
+            <div class="card">
+                <h3>Feature 2</h3>
+                <p>Description of feature 2</p>
+            </div>
+            <div class="card">
+                <h3>Feature 3</h3>
+                <p>Description of feature 3</p>
+            </div>
+            <div class="card">
+                <h3>Feature 4</h3>
+                <p>Description of feature 4</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
