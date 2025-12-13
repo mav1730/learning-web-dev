@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom Bouquets</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* 1. RESET - Essential for consistent look */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            /* Using a soft gradient overlay on your image so text pops */
+            background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), 
+                        url("https://i.pinimg.com/1200x/51/4b/79/514b79ba61e263bd2fc370400b465463.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Keeps background still when scrolling */
+            min-height: 100vh;
+        }
+
+        /* 2. NAVIGATION - Clean and aligned */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Vertically center items */
+            height: 70px;
+            padding: 0 5%;
+            background-color: rgba(209, 209, 166, 0.95); /* Slight transparency */
+            position: sticky; /* Keeps nav at top */
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 40px;
+        }
+
+        .logo-container h2 {
+            font-family: cursive;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d15f5f; /* Change color on hover */
+        }
+
+        /* 3. MAIN LAYOUT */
+        main {
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        /* 4. THE PRODUCT CARD - Reusable Class */
+        .card {
+            display: flex;
+            /* Responsive width: 90% of screen, but never bigger than 1000px */
+            width: 90%; 
+            max-width: 1000px; 
+            height: 350px;
+            background: rgba(255, 253, 240, 0.9);
+            border-radius: 15px; /* Soft corners */
+            overflow: hidden; /* Ensures image fits inside rounded corners */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* 3D effect */
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px); /* Moves up slightly when hovered */
+        }
+
+        /* Image handling */
+        .card-image {
+            width: 50%; /* Image takes half the card */
+            height: 100%;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ESSENTIAL: Crops image perfectly without stretching */
+        }
+
+        /* Text handling inside the card */
+        .card-content {
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-content h3 {
+            font-size: 1.8rem;
+            color: #4a4a4a;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column; /* Stack image on top of text */
+                height: auto;
+            }
+            .card-image, .card-content {
+                width: 100%;
+            }
+            .card-image {
+                height: 250px;
+            }
+            nav ul {
+                display: none; /* Hiding menu for simplicity on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/2926/2926736.png" alt="logo">
+                <h2>Blossom</h2>
+            </div>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="card-image">
+                <img src="https://i.pinimg.com/736x/b8/46/45/b846457ac760627612974bb4d7aad8f5.jpg" alt="Flower Bouquet 1">
+            </div>
+            <div class="card-content">
+                <h3>Spring Delight</h3>
+                <p>A beautiful arrangement of fresh spring flowers, perfect for weddings and sunny days.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="https://i.pinimg.com/736x/b2/9f/3d/b29f3d0b5e9ca89e1698501d648c9616.jpg" alt="Flower Bouquet 2">
+            </div>
+            <div class="card-content">
+                <h3>Rose Romance</h3>
+                <p>Deep red roses combined with elegant white lilies to express your deepest love.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="https://i.pinimg.com/736x/1e/7f/c8/1e7fc86c2dd82feeeddc4d9fd888c4a1.jpg" alt="Flower Bouquet 3">
+            </div>
+            <div class="card-content">
+                <h3>Vintage Charm</h3>
+                <p>A rustic collection of dried flowers and wildflowers for that perfect aesthetic vibe.</p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
