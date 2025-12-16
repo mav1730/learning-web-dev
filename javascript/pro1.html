@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+
+    <style>
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: #020617;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        thead {
+            background: #1e293b;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            text-align: center;
+        }
+
+        th {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: #93c5fd;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #1e293b;
+            transition: background 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: rgba(59, 130, 246, 0.08);
+        }
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .disabled {
+            color: #64748b;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📚 List of Courses</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    <th>Course Link</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Maths</td>
+                    <td>
+                        <a href="details.html?courseid=1234&level=beginner">
+                            Click Here
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Science</td>
+                    <td>
+                        <a href="details.html?courseid=1224&level=beginner">
+                            Click Here
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>English</td>
+                    <td class="disabled">Coming Soon</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Computer</td>
+                    <td class="disabled">Coming Soon</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>SST</td>
+                    <td class="disabled">Coming Soon</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

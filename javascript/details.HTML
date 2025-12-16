@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Details</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", Arial, sans-serif;
+            background: linear-gradient(135deg, #020617, #020617);
+            color: #e5e7eb;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: #020617;
+            border: 1px solid #1e293b;
+            padding: 24px 28px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            text-align: center;
+            margin-bottom: 16px;
+            color: #38bdf8;
+        }
+
+        .detail {
+            margin-bottom: 12px;
+            padding: 10px;x
+            background: #020617;
+            border-radius: 8px;
+            border: 1px solid #020617;
+        }
+
+        .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #94a3b8;
+            margin-bottom: 4px;
+        }
+
+        .value {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .error {
+            text-align: center;
+            color: #f87171;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>📘 Course Details</h1>
+
+        <div id="details"></div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const courseid = params.get("courseid");
+
+        const courses = [
+            {
+                courseid: "1234",
+                coursename: "Mathematics Class 8",
+                coursedescription: "This is the description about Mathematics Class 8."
+            },
+            {
+                courseid: "1224",
+                coursename: "Science Class 8",
+                coursedescription: "This is the description about Science Class 8."
+            }
+        ];
+
+        let selectedCourse = null;
+
+        courses.forEach(course => {
+            if (course.courseid === courseid) {
+                selectedCourse = course;
+            }
+        });
+
+        const details = document.getElementById("details");
+
+        if (!selectedCourse) {
+            details.innerHTML = `<div class="error">⚠️ Course not found</div>`;
+        } else {
+            details.innerHTML = `
+                <div class="detail">
+                    <div class="label">Course ID</div>
+                    <div class="value">${selectedCourse.courseid}</div>
+                </div>
+
+                <div class="detail">
+                    <div class="label">Course Name</div>
+                    <div class="value">${selectedCourse.coursename}</div>
+                </div>
+
+                <div class="detail">
+                    <div class="label">Description</div>
+                    <div class="value">${selectedCourse.coursedescription}</div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
