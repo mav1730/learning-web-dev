@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><style>
+    body{
+        background-color: bisque;
+        
+    }
+    .container{
+        width: 100vh;
+        border: 2px solid black;
+        border-radius: 17px;
+    }
+    .parent{
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 100vh;
+}
+input{
+
+    color: rgb(238, 179, 16);
+   width: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+
+}
+button{
+    height: 3em;
+    text
+    color: blueviolet;
+   border-radius: 16px;
+}
+h1{
+    font-family: cursive;
+
+}
+</style>
+
+<body>
+    <div class="parent">
+    <div class="container">
+    <form>
+        <h1>TEMPERATURE CONVERTER</h1>
+        <input type="number" id="textbox" value="0"><br>
+
+        <input type="radio" id="tofaren" name="unit">
+        <label for="tofaren">CELSUIS ➡️➡️ FARENHEIT</label><br>
+
+        <input type="radio" id="tocel" name="unit">
+        <label for="tocel">FARENHEIT➡️➡️CELSUIS </label><br><br>
+
+        <button type="button" onclick="convert()">SUBMIT</button>
+
+        <p id="result">SELECT A UNIT </p>
+    </form>
+    <script src="script.js"></script>
+    </div>
+    </div>
+</body>
+
+</html>

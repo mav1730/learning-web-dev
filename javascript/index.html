@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(226, 191, 138), rgb(255, 228, 181));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', system-ui, sans-serif;
+}
+
+h1 {
+    position: absolute;
+    top: 30px;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    color: #333;
+}
+
+.card {
+    height: 60vh;
+    width: 500px;
+    background: #fff6d5;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+label {
+    font-size: 7rem;
+    font-weight: 700;
+    color: #2f2f2f;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#container {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    padding: 12px 22px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 14px;
+    background-color: #011830;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #010a14 ;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+</style>
+
+</head>
+<body>
+    <h1>COUNTER</h1>
+<div class="card">
+<label id="label">0</label><br>
+<div id="container">
+    <button id="decreasebtn">DECREASE</button>
+    <button id="resetbtn">RESET</button>
+    <button id="increasebtn">INCREASE</button>   
+</div>
+</div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
