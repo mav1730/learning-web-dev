@@ -1,5 +1,5 @@
 const minnum=0;
-const maxnum=100;
+const maxnum=20;
 
 const answer=Math.floor(Math.random()*(maxnum-minnum+1)+minnum);
 let attempts=0;
@@ -15,9 +15,9 @@ if(isNaN(guess)){
 }else{
     attempts++;
     if(guess>answer){
-        alert("TOO HIGH !!!TRY AGAIN");
+        alert("lower !!!TRY AGAIN");
     }else if(guess<answer){
-        alert("TOO LOW TRY AGAIN!!!");
+        alert("higher TRY AGAIN!!!");
     }else{
         alert(`CONGRATSSSSSS ${name}I KNEW YOU WILL RIGHTTT!!!!! YOU TOOK ${attempts} ATTEMPTS`);
         run=false;

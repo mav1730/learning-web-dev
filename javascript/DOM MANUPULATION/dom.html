@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>#container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;      
+}
+.active{
+    outline: 4px solid green;
+}
+.box {
+  width: 80px;
+  height: 80px;
+  background: rgb(194, 94, 94);
+  cursor: pointer;
+}
+#box {
+  width: 100px;
+  height: 100px;
+  background: gray;
+}
+.selected {
+  outline: 3px solid red;
+}
+</style>
+</head>
+<body>
+    <div class="controls">
+  <button id="add">Add Box</button>
+  <button id="remove">Remove Box</button>
+  <button id="color">Random Color</button>
+  <button id="toggle">Toggle Highlight</button>
+  <button id="reset">Reset</button>
+</div>
+
+<p id="count"></p>
+
+<div id="container"></div>
+<script src="script.js"></script>
+</body>
+</html>
