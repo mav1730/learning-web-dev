@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CLICK TO START TIMER</h1>
+    <button onclick="starttem()">START</button>
+    <button onclick="stoptem()">STOP </button>
+<script>
+function starttem(){
+    setInterval(() => {
+        while(!stoptem()){
+            let count=0;
+            console.log(count);
+            count++;
+        }
+    }, 1000);
+}
+function stoptem(){
+    console.log("time stopped")
+}
+</script>
+</body>
+</html>
