@@ -3,7 +3,7 @@ const startTime = Date.now();
 console.log("1. Setting a timer for 1 second...");
 setTimeout(() => {
     console.log(`⏰ TIMER FINISHED! It took ${Date.now() - startTime}ms`);
-}, 1000);
+}, 0);
 
 console.log("2. Starting a heavy loop. The waiter is now BUSY...");
 
