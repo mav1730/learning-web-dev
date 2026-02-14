@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 const eventemitter = require('events');
-const { mkdir } = require('fs');
+
 
 const uploadsys = new eventemitter();
 const filename = process.argv[2]
@@ -19,7 +19,7 @@ async function startupload(){
     }
     try {
         const uploadpath = path.join(__dirname,'uploads')
-        await fs.mkdir(uploadpath,{recursive:true});
+        await fs.mkdir(path.join(__dirname,'uploads','2026','feb'),{recursive:true})
         console.log(` Uploading ${filename} to ${uploadpath}...`);
         uploadsys.emit('done',filename);
     }catch(err){
