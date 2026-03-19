@@ -18,6 +18,6 @@ const server = http.createServer((req,res) =>{
 }
 )
 
-server.listen(4000,() =>{
+server.listen(4000,'0.0.0.0',() =>{
     console.log("SERVER IS READY TO GO BOSS!!")
 })
