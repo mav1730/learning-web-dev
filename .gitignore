@@ -26,3 +26,7 @@ npm-debug.log*
 dist/
 build/
 .cache/
+# IDE / temp junk
+tempCodeRunnerFile.js
+*.lnk
+*.bak
