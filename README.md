@@ -1,5 +1,5 @@
 # Learning Web Development
-
+this is a project that involves
 Structured practice repo for frontend fundamentals — HTML, CSS, and JavaScript exercises and small projects.
 
 > **Note:** Active production projects live in their own repos. See [BeaconOps](https://github.com/mav1730/beaconops) for the current automation pipeline.
